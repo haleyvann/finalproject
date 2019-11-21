@@ -7,6 +7,14 @@
 <title>New User Sign Up</title>
 <script src="NewUser.js" type="text/javascript"></script><link href="style.css" type="text/css" rel="stylesheet">
 </head>
+<header>
+<nav>
+<a href="index.jsp">Home</a>
+<a href="menu.jsp">Menu</a>
+<a href="login.jsp">Log In</a>
+<a href="cart.jsp">Cart</a>
+</nav>
+</header>
 <body>
 
 <h1>New User Sign Up</h1>
