@@ -1,11 +1,79 @@
-@charset "ISO-8859-1";
+*{
+text-align: center;
+}
 
-h1{
-	backgroud-color: #FF0000;
-	text-align: center;
-	color: green;
-	}
+h1, h2{
+color: white;
+border: 2px solid white;
+background-color:red;
+border-radius: 3px;
+}
+
+h3{
+color:white;
+background-color:green;
+margin-left: 300px;
+margin-right: 300px;
+}
+
+nav{
+	background-color: green;
+	text-align: right;
+}
 
 a{
-	color: #FF0000;
+color: white;
+font-family: "Georgia";
+font-size: 25px;
+display: inline-block;
+padding: 12px;
+text-align: center;
+text-transform: uppercase;
+background-color: red;
+text-decoration: none;
+border-radius: 3px;
+margin: 10px;
+text-align: center;
 }
+
+body{
+font-family: "Georgia";
+background-image: url("images/italianflag.jpg");
+}
+
+th{
+color: red;
+font-size: 25px;
+}
+
+table{
+border-spacing:15px 2px;;
+border: 2px solid orange;
+margin: auto;
+color: white;
+background-color: #F1C869;
+border: 2px solid white;
+}
+
+td{
+font-size: 15px;
+font-weight: bold; 
+}
+
+body{
+
+}
+
+form{
+background-color: white;
+margin-left: 300px;
+margin-right: 300px;
+}
+
+p {
+background: rgba(245, 245, 245, 0.4);
+color: black;
+font-weight: bold;
+}
+
+
