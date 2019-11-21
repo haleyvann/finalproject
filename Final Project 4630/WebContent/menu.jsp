@@ -3,9 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="style.css" type="text/css" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<header>
+<nav>
+<a href="index.jsp">Home</a>
+<a href="menu.jsp">Menu</a>
+<a href="login.jsp">Log In</a>
+<a href="cart.jsp">Cart</a>
+</nav>
+</header>
 <body>
 <h1>Menu</h1>
 <img src="images/pep.jpg"/>
