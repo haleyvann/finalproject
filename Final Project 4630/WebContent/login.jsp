@@ -5,7 +5,7 @@
 <head>
 <link href="style.css" type="text/css" rel="stylesheet">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Log In Page</title>
 </head>
 <header>
 <nav>
@@ -16,7 +16,6 @@
 </nav>
 </header>
 <body>
-<h1>test test test</h1>
-<h2> login servlet</h2>
+<h1>Log In To Tony's Pizza!</h1>
 </body>
 </html>
