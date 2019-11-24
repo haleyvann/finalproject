@@ -17,5 +17,12 @@
 </header>
 <body>
 <h1>Log In To Tony's Pizza!</h1>
+<form>
+<h4>Username:</h4>
+<input type="text" name="username">
+<h4>Password:</h4>
+<input type="text" name="password"><br>
+<input type="submit" value="Log In">
+</form>
 </body>
 </html>
