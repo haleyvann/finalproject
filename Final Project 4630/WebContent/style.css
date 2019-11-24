@@ -38,6 +38,20 @@ margin-right: 300px;
 text-align: center;
 }
 
+h4{
+color: red;
+font-family: "Georgia";
+font-size: 25px;
+display: inline-block;
+padding: 12px;
+text-align: center;
+text-transform: uppercase;
+background-color: white;
+border-radius: 5px;
+margin: 15px;
+text-align: center;
+}
+
 nav{
 	text-align: right;
 }
@@ -76,6 +90,21 @@ text-decoration: none;
 border-radius: 5px;
 margin: 15px;
 text-align: center;
+}
+
+input[type=text]{
+color: black;
+font-family: "Georgia";
+font-size: 15px;
+display: inline-block;
+padding: 10px;
+text-align: center;
+text-transform: uppercase;
+background-color: white;
+text-decoration: none;
+border-radius: 5px;
+margin: 15px;
+text-align: center;	
 }
 
 .jumbotron {
