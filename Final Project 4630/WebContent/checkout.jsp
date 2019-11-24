@@ -25,6 +25,14 @@ Menu menu = new Menu();
 <meta charset="UTF-8">
 <title>Tony's Pizza Checkout</title>
 </head>
+<header>
+<nav>
+<a href="index.jsp">Home</a>
+<a href="menu.jsp">Menu</a>
+<a href="login.jsp">Log In</a>
+<a href="cart.jsp">Cart</a>
+</nav>
+</header>    
 <body>
 <h1>Tony's Pizza Checkout</h1>
 <p>Bring up current order (w/ picture and add/minus buttons at top of form)</p>
@@ -40,6 +48,8 @@ Menu menu = new Menu();
 <input type="submit" name="Submit Order" />
  
 </form>
-<a href="index.jsp">Cancel Order</a>
+<form name="cancel" action="index.jsp">
+<input type="submit" name="cancel" value="Cancel Order" >
+</form>
 </body>
 </html>
