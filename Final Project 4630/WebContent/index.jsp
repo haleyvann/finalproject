@@ -16,9 +16,13 @@
 </nav>
 </header>
 <body>
-<h1>Tony's Pizza Home Page!</h1>
-
-
+<h1>Welcome to Tony's Pizza!</h1>
+<div class="container">
+ <div class="jumbotron">
+	<a href="menu.jsp">Order Now!</a>
+</div>
+</div>
 
 </body>
 </html>
+
