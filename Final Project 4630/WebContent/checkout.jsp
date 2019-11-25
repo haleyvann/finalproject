@@ -12,8 +12,6 @@
 <%
 
 ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
-//still need to get price of each item to put with the order to find total price
-
 
 // retrieve information from the checkoutservlet about the order and update the total price of the order
 Order order = (Order) session.getAttribute("order");
