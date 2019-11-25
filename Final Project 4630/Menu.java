@@ -15,6 +15,7 @@ public class Menu {
 	private int menuID;
 	private String menuItem;
 	private double price;
+	private int quantity;
 	
 	/**
 	 * @param menuItem
@@ -82,29 +83,37 @@ public class Menu {
 		this.price = price;
 	}
 
+	/**
+	 * @return the quantity
+	 */
+	public int getQuantity() {
+		return quantity;
+	}
 
-	@Override
+
+	/**
+	 * @param quantity the quantity to set
+	 */
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+
 	public String toString() {
-		String img = "<img src=";
+		String img = "<p>" + "<ul>" + "<li>" + "<img src=";
 		
 		if(this.menuItem.equalsIgnoreCase("Pepperoni Pizza")) {
-			img += "'images/pep.jpg'/>";
+			img += "'pep.jpg'/>" + "</li>";
 		} else if(this.menuItem.equalsIgnoreCase("Cheese Pizza")) {
-			img += "'images/cheese.jpg'/>";
+			img += "'cheese.jpg'/>" + "</li>";
 		} else if(this.menuItem.equalsIgnoreCase("Vegan Pizza")) {
-			img += "'images/veganPizza.jpg'/>";
+			img += "'veganPizza.jpg'/>" + "</li>";
 		} else if(this.menuItem.equalsIgnoreCase("Meat Lovers Pizza")) {
-			img += "'images/meatPizza.jpg'/>";
+			img += "'meatPizza.jpg'/>" + "</li>";
 		} else {
-			img += "'images/bcPizza.jpg'/>";
+			img += "'bcPizza.jpg'/>" + "</li>";
 		}
-		return img + menuItem + " price $" + price +
-				"<form name=\"addQuantity\" action=\"CheckoutServlet\" method=\"post\"> " + "<br>" +
-				"<input type=\"text\" name=\"addQuantity\" value=\"Quantity of Item\" >" + "<br>";
+		return img + "</ul>" + menuItem + " price $" + price + "</p>";
 	}
-	
-
-	
-	
 	
 }
