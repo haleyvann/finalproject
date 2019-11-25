@@ -34,7 +34,7 @@ h3{
 font-size: 20px;
 }
 
-h4, label{
+h4, label, ul, li{
 color: red;
 font-family: "Georgia";
 font-size: 25px;
