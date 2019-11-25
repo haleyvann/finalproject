@@ -12,9 +12,11 @@
 <%
 
 ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
+//still need to get price of each item to put with the order to find total price
+
 
 // retrieve information from the checkoutservlet about the order and update the total price of the order
-Order order = (Order) request.getAttribute("order");
+Order order = (Order) session.getAttribute("order");
 
 //need to figure out when customerID is initialized and how to keep track of it
 Customer cust = (Customer) session.getAttribute("cust");
@@ -29,7 +31,8 @@ Customer cust = (Customer) session.getAttribute("cust");
 </head>
 <body>
 <h1>Tony's Pizza Checkout</h1>
-<p>Bring up current order (w/ picture and add/minus buttons at top of form)</p>
+<br>
+<h4>Order Information</h4>
 
 <p> <%= order.toString() %></p>
 
@@ -72,13 +75,29 @@ Customer cust = (Customer) session.getAttribute("cust");
         <input type="text" name ="zip" id="zip" value="" /> 
     </li>  
     <li>
+    <li>
+    <h4>Credit Card Information</h4>
+    </li>
+    <li>
+        <label for="ccNumber">Credit Card Number: </label>
+        <input type="text" name ="number" id="ccNumber" value="" /> 
+    </li>  
+    <li>
+    <li>
+        <label for="ccExpDate">Expiration Date: </label>
+        <input type="text" name ="date" id="ccExpDate" value="" /> 
+    </li>  
+    <li>
+    <li>
+        <label for="ccCCV">CCV: </label>
+        <input type="text" name ="ccv" id="ccCCV" value="" /> 
+    </li>  
+    <li>
     	<input type="submit" name="Submit Order" />
     </li>
 </ul>
  
 </form>
-<form name="cancel" action="index.jsp">
-<input type="submit" name="cancel" value="Cancel Order" >
-</form>
+<a href="index.jsp">Cancel Order</a>
 </body>
 </html>
