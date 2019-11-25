@@ -45,7 +45,7 @@ public class MenuServlet extends HttpServlet {
 		// default jsp 
 		String url = "/index.jsp";
 		
-		String cart = "";
+		Menu cart = new Menu();
 		
 		// setup the selected menu item and update cart depending on which submit button was pressed
 		if(request.getParameter("addPep") != null) {
@@ -53,37 +53,37 @@ public class MenuServlet extends HttpServlet {
 			url = "/menu.jsp";
 			// setup pep pizza to pass to the cart
 			Menu selectedPep = new Menu(1, "Pepperoni Pizza", 10.99);
-			cart = selectedPep.toString();
+			cart = selectedPep;
 		} else if(request.getParameter("addCheese") != null) {
 			// pass to menu page
 			url = "/menu.jsp";
 			// setup selected cheese pizza to pass to the cart
 			Menu selectedCheese = new Menu(2, "Cheese Pizza", 9.99);
-			cart = selectedCheese.toString();
+			cart = selectedCheese;
 		} else if(request.getParameter("addVegan") != null) {
 			// pass to menu page
 			url = "/menu.jsp";
 			// setup selected vegan pizza to pass to the cart
 			Menu selectedVegan = new Menu(3, "Vegan Pizza", 11.99);
-			cart = selectedVegan.toString();
+			cart = selectedVegan;
 		} else if(request.getParameter("addML") != null) {
 			// pass to menu page
 			url = "/menu.jsp";
 			// setup selected ml pizza to pass to the cart
 			Menu selectedML = new Menu(4, "Meat Lovers Pizza", 12.99);
-			cart = selectedML.toString();
+			cart = selectedML;
 		} else if(request.getParameter("addBC") != null) {
 			url = "/menu.jsp";
 			// setup selected bc pizza to pass to the cart
 			Menu selectedBC = new Menu(5, "Buffalo Chicken Pizza", 13.99);
-			cart = selectedBC.toString();
+			cart = selectedBC;
 		} else if(request.getParameter("cart") != null) {
 			url = "/cart.jsp";
 			// setup selected bc pizza to pass to the cart
 		} 
 		 
-		// send cart information to the menu.jsp and attach it to the session
-		session.setAttribute("cart", cart);
+		  // send cart information to the menu.jsp and attach it to the session
+		request.setAttribute("cart", cart);
 		
 		  // send control to the next component
 		  RequestDispatcher dispatcher = request.getRequestDispatcher(url);
