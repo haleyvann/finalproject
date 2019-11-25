@@ -56,7 +56,7 @@ public class RegisterServlet extends HttpServlet {
 			
 			Register reg = new Register("netappsdb", "root", "pwd");
 			
-			reg.doRegister(nu);
+			reg.doRegister(cust);
 
 			RequestDispatcher rs = request.getRequestDispatcher("/index.jsp");
 	        rs.forward(request, response);
