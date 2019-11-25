@@ -113,7 +113,7 @@ public class Menu {
 		} else {
 			img += "'bcPizza.jpg'/>" + "</li>";
 		}
-		return img + "</ul>" + menuItem + " price $" + price + "</p>";
+		return img + "</ul>" + quantity + " " + menuItem + "s for $" + price + " each" + "</p>";
 	}
 	
 }
