@@ -31,7 +31,7 @@ public class Register {
 			
 			ps.setString(1, cust.getfName());
 			ps.setString(2, cust.getlName());
-			ps.setString(3, cust.getUserName());
+			ps.setString(3, cust.getEmail());
 			ps.setString(4, cust.getPassword());
 			ps.setString(5, cust.getPhone());
 			
