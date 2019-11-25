@@ -40,7 +40,7 @@ Customer customer = new Customer();
 <img src="images/cheese.jpg"/>
 </div>
 <h2>Cheese Pizza</h2>
-<h3>$11.99</h3>
+<h3>$10.99</h3>
 <form name="addCart1" action="MenuServlet" method="post">
 <input type="submit" name="addCheese" value="Add to Cart" >
 </form>
@@ -48,7 +48,7 @@ Customer customer = new Customer();
 <img src="images/pep.jpg"/>
 </div>
 <h2>Pepperoni Pizza</h2>
-<h3>$12.99</h3>
+<h3>$9.99</h3>
 <form name="addCart2" action="MenuServlet" method="post">
 <input type="submit" name="addPep" value="Add to Cart" >
 </form>
@@ -56,7 +56,7 @@ Customer customer = new Customer();
 <img src="images/sausage.jpg"/>
 </div>
 <h2>Sausage Pizza</h2>
-<h3>$12.99</h3>
+<h3>$11.99</h3>
 <form name="addCart3" action="MenuServlet" method="post">
 <input type="submit" name="addVegan" value="Add to Cart" >
 </form>
@@ -64,7 +64,7 @@ Customer customer = new Customer();
 <img src="images/meatPizza.jpg"/>
 </div>
 <h2>Meat Lovers Pizza</h2>
-<h3>$16.99</h3>
+<h3>$12.99</h3>
 <form name="addCart4" action="MenuServlet" method="post">
 <input type="submit" name="addML" value="Add to Cart" >
 </form>
@@ -72,7 +72,7 @@ Customer customer = new Customer();
 <img src="images/theWorks.jpg"/>
 </div>
 <h2>The Works</h2>
-<h3>$16.99</h3>
+<h3>$13.99</h3>
 <form name="addCart5" action="MenuServlet" method="post">
 <input type="submit" name="addBC" value="Add to Cart" >
 </form>
