@@ -11,8 +11,6 @@
     
 <%
 
-ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
-
 // retrieve information from the checkoutservlet about the order and update the total price of the order
 Order order = (Order) session.getAttribute("order");
 
@@ -96,8 +94,6 @@ Customer cust = (Customer) session.getAttribute("cust");
 </ul>
  
 </form>
-<form name="cancel" action="index.jsp">
-<input type="submit" name="cancel" value="Cancel Order" >
-</form>
+<a href="index.jsp">Cancel Order</a>
 </body>
 </html>
