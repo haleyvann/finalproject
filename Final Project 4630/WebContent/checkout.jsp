@@ -77,6 +77,8 @@ Customer cust = (Customer) session.getAttribute("cust");
 </ul>
  
 </form>
-<a href="index.jsp">Cancel Order</a>
+<form name="cancel" action="index.jsp">
+<input type="submit" name="cancel" value="Cancel Order" >
+</form>
 </body>
 </html>
