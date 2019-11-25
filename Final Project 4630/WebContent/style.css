@@ -34,7 +34,7 @@ h3{
 font-size: 20px;
 }
 
-h4{
+h4, p, label{
 color: red;
 font-family: "Georgia";
 font-size: 25px;
@@ -88,24 +88,23 @@ margin: 15px;
 text-align: center;
 }
 
-input[type=img]{
-color: white;
+input[type=image]{
 font-family: "Georgia";
 font-size: 15px;
 display: inline-block;
 padding: 10px;
 text-align: center;
 text-transform: uppercase;
-background-color: red;
+background-color: white;
 text-decoration: none;
 border-radius: 5px;
 margin: 15px;
 text-align: center;
-height:250px;
-width:250px;
+height:100px;
+width:100px;
  }
 
-input[type=text]{
+input[type=text], [type=password]{
 color: black;
 font-family: "Georgia";
 font-size: 15px;
