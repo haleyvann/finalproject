@@ -61,6 +61,7 @@ public class MenuServlet extends HttpServlet {
 			url = "/menu.jsp";
 			// setup pep pizza to pass to the cart
 			Menu selectedPep = new Menu(1, "Pepperoni Pizza", 10.99);
+			selectedPep.setQuantity(Integer.parseInt(request.getParameter("addQuantity")));
 			order.addToRevenue(selectedPep.getPrice(), Integer.parseInt(request.getParameter("addQuantity")));
 			cart = selectedPep;
 		} else if(request.getParameter("addCheese") != null) {
@@ -68,6 +69,7 @@ public class MenuServlet extends HttpServlet {
 			url = "/menu.jsp";
 			// setup selected cheese pizza to pass to the cart
 			Menu selectedCheese = new Menu(2, "Cheese Pizza", 9.99);
+			selectedCheese.setQuantity(Integer.parseInt(request.getParameter("addQuantity")));
 			order.addToRevenue(selectedCheese.getPrice(), Integer.parseInt(request.getParameter("addQuantity")));
 			cart = selectedCheese;
 		} else if(request.getParameter("addVegan") != null) {
@@ -75,6 +77,7 @@ public class MenuServlet extends HttpServlet {
 			url = "/menu.jsp";
 			// setup selected vegan pizza to pass to the cart
 			Menu selectedVegan = new Menu(3, "Vegan Pizza", 11.99);
+			selectedVegan.setQuantity(Integer.parseInt(request.getParameter("addQuantity")));
 			order.addToRevenue(selectedVegan.getPrice(), Integer.parseInt(request.getParameter("addQuantity")));
 			cart = selectedVegan;
 		} else if(request.getParameter("addML") != null) {
@@ -82,12 +85,14 @@ public class MenuServlet extends HttpServlet {
 			url = "/menu.jsp";
 			// setup selected ml pizza to pass to the cart
 			Menu selectedML = new Menu(4, "Meat Lovers Pizza", 12.99);
+			selectedML.setQuantity(Integer.parseInt(request.getParameter("addQuantity")));
 			order.addToRevenue(selectedML.getPrice(), Integer.parseInt(request.getParameter("addQuantity")));
 			cart = selectedML;
 		} else if(request.getParameter("addBC") != null) {
 			url = "/menu.jsp";
 			// setup selected bc pizza to pass to the cart
 			Menu selectedBC = new Menu(5, "Buffalo Chicken Pizza", 13.99);
+			selectedBC.setQuantity(Integer.parseInt(request.getParameter("addQuantity")));
 			order.addToRevenue(selectedBC.getPrice(),Integer.parseInt(request.getParameter("addQuantity")));
 			cart = selectedBC;
 		} else if(request.getParameter("cart") != null) {
