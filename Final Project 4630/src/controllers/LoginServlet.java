@@ -44,6 +44,10 @@ public class LoginServlet extends HttpServlet {
         
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
+		
+		Customer cust = new Customer();
+		cust.setEmail(email);
+		cust.setPassword(pass);
         
         
         if(valid.checkUser(email, pass)){
