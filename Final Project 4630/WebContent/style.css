@@ -34,7 +34,7 @@ h3{
 font-size: 20px;
 }
 
-h4, p, label{
+h4, label{
 color: red;
 font-family: "Georgia";
 font-size: 25px;
@@ -43,6 +43,19 @@ padding: 12px;
 text-align: center;
 text-transform: uppercase;
 background-color: white;
+border-radius: 5px;
+margin: 15px;
+text-align: center;
+}
+
+p{
+color: red;
+font-family: "Georgia";
+font-size: 25px;
+display: inline-block;
+padding: 12px;
+text-align: center;
+text-transform: uppercase;
 border-radius: 5px;
 margin: 15px;
 text-align: center;
@@ -142,4 +155,3 @@ margin-right:auto;
 	display: flex;
 	flex-wrap: wrap;
 }
-
