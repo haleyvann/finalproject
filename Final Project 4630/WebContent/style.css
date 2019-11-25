@@ -35,6 +35,7 @@ font-size: 20px;
 }
 
 h4, label, ul, li{
+list-style: none;
 color: red;
 font-family: "Georgia";
 font-size: 25px;
