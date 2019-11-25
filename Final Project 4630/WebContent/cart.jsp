@@ -14,6 +14,7 @@ Menu cart = (Menu) request.getAttribute("cart");
 // loop thru the arraylist to export as a String
 String finalCart = "";
 for(int i = 0; i < cartItems.size(); ++i) {
+	if(i > 0)
 		finalCart += cartItems.get(i);
 }
 
