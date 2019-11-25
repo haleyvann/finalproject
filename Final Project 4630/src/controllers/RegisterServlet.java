@@ -54,7 +54,7 @@ public class RegisterServlet extends HttpServlet {
 			cust.setPassword(pass);
 			cust.setPhone(phone);
 			
-			Register reg = new Register("netappsdb", "root", "pwd");
+			Register reg = new Register("pizza", "root", "liammist4630");
 			
 			reg.doRegister(cust);
 
