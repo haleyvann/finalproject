@@ -17,12 +17,24 @@
 </header>
 <body>
 <h1>Log In To Tony's Pizza!</h1>
-<form>
-<h4>Username:</h4>
-<input type="text" name="username">
-<h4>Password:</h4>
-<input type="text" name="password"><br>
-<input type="submit" value="Log In">
+
+  <form name="logIn" action="LoginServlet" method="post">
+<ul>
+    <li>
+        <label for="email">Email Address: </label>
+        <input type="text" name ="email" id="email" value="" /> 
+    </li>    
+    <li>
+    	<label for="pass">Password: </label>
+		<input type="text" name ="pass" id="pass" value="" /> 
+    </li>
+    <li>
+    	<input type="submit" value="Log In">
+    </li>
+</ul>
 </form>
+
+<h3>New User?</h3>
+<a href="register.jsp">Sign Up Here!"</a>
 </body>
 </html>
