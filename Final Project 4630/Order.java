@@ -2,6 +2,7 @@
  * 
  */
 package model;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -75,6 +76,10 @@ public class Order extends Menu {
 	 */
 	public int getOrderQuantity() {
 		return orderQuantity;
+	}
+	
+	public void subtractQuantity(int quantity) {
+		this.orderQuantity = orderQuantity - quantity;
 	}
 
 
