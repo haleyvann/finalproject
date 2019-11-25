@@ -37,7 +37,12 @@ for(int i = 1; i < cartItems.size(); ++i) {
 <form name="checkout" action="CheckoutServlet" method="post">
 <input type="submit" name="checkout" value="Checkout" >
 </form>
-<a href="index.jsp">Cancel Order</a>
-<a href="menu.jsp">Continue Shopping</a>
+<form name="cancel" action="index.jsp">
+<input type="submit" name="cancel" value="Cancel Order">
+</form>
+
+<form name="continue" action="menu.jsp">
+<input type="submit" name="continue" value="Continue Shopping" >
+</form>
 </body>
 </html>
