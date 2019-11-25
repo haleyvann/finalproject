@@ -3,12 +3,9 @@
     
 <%@ page import="java.util.ArrayList" %> 
 <%
-
 ArrayList<String> cartItems = new ArrayList<String>();
 session.setAttribute("cartItems", cartItems);
-
 %>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +13,21 @@ session.setAttribute("cartItems", cartItems);
 <meta charset="ISO-8859-1">
 <title>Tony's Pizza Home Page!</title>
 </head>
-<body>
-
-<h1>Tony's Pizza Home Page!</h1>
-
+<header>
+<nav>
+<a href="index.jsp">Home</a>
 <a href="menu.jsp">Menu</a>
-<a href="cart.jsp">Cart</a>
 <a href="login.jsp">Log In</a>
+<a href="cart.jsp">Cart</a>
+</nav>
+</header>
+<body>
+<h1> Welcome to Tony's Pizza!</h1>
+<div class="container">
+ <div class="jumbotron">
+	<a href="menu.jsp">Order Now!</a>
+</div>
+</div>
 
 
 </body>
