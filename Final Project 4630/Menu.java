@@ -88,15 +88,15 @@ public class Menu {
 		String img = "<img src=";
 		
 		if(this.menuItem.equalsIgnoreCase("Pepperoni Pizza")) {
-			img += "whatever the link is to finish the tag";
+			img += "'images/pep.jpg'/>";
 		} else if(this.menuItem.equalsIgnoreCase("Cheese Pizza")) {
-			img += "whatever the link is to finish the tag";
+			img += "'images/cheese.jpg'/>";
 		} else if(this.menuItem.equalsIgnoreCase("Vegan Pizza")) {
-			img += "whatever the link is to finish the tag";
+			img += "'images/veganPizza.jpg'/>";
 		} else if(this.menuItem.equalsIgnoreCase("Meat Lovers Pizza")) {
-			img += "whatever the link is to finish the tag";
+			img += "'images/meatPizza.jpg'/>";
 		} else {
-			img += "whatever the link is to finish the tag";
+			img += "'images/bcPizza.jpg'/>";
 		}
 		return img + menuItem + " price $" + price +
 				"<form name=\"addQuantity\" action=\"CheckoutServlet\" method=\"post\"> " + "<br>" +
