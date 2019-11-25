@@ -24,7 +24,7 @@ public class Register {
 	
 	public void doRegister(NewUser newUser) {
 		
-		String query = "insert into users (fName, lName, email, pass, phone) values(?,?,?,?,?)";
+		String query = "insert into customers (fName, lName, userName, password, phone) values(?,?,?,?,?)";
 		
 		try {
 			PreparedStatement ps = this.connection.prepareStatement(query);
