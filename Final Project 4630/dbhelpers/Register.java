@@ -22,18 +22,18 @@ public class Register {
 		}
 	}
 	
-	public void doRegister(NewUser newUser) {
+	public void doRegister(Customer cust) {
 		
 		String query = "insert into customers (fName, lName, userName, password, phone) values(?,?,?,?,?)";
 		
 		try {
 			PreparedStatement ps = this.connection.prepareStatement(query);
 			
-			ps.setString(1, newUser.getfName());
-			ps.setString(2, newUser.getlName());
-			ps.setString(3, newUser.getEmail());
-			ps.setString(4, newUser.getPass());
-			ps.setString(5, newUser.getPhone());
+			ps.setString(1, cust.getfName());
+			ps.setString(2, cust.getlName());
+			ps.setString(3, cust.getUserName());
+			ps.setString(4, cust.getPassword());
+			ps.setString(5, cust.getPhone());
 			
 			ps.executeUpdate();
 			
