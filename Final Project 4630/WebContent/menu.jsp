@@ -65,8 +65,8 @@ cartItems.add(cart);
 <br>
 <input type="submit" name="addBC" value="Add to Cart" >
 </form>
-<form name="goToCart" action="MenuServlet" method="post">
-<input type="submit" name="cart" value="Show Cart" >
+<form name="goToCart" action="cart.jsp">
+<input type="image" name="submit" src="images/cart.png" >
 </form>
 
 </body>
