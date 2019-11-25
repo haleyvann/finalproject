@@ -19,30 +19,34 @@
 
 <h1>New User Sign Up</h1>
 
-<form class="new_user_form" name="newUser" action="index.jsp" method="post" onsubmit="return validateNewUser();">
+<form class="new_user_form" name="newUser" action="RegisterServlet" method="post">
 <ul>
     <li>
-        <label for="fName">First Name: </label>
-        <input type="text" id="fName" value="" /> 
+        <label>First Name: </label>
+        <input type="text" name="fName" value="" /> 
     </li>    
 	<li>
-		<label for="lName">Last Name: </label>
-		<input type="text" id="lName" value="" />  
+		<label>Last Name: </label>
+		<input type="text" name="lName" value="" />  
     </li>
     <li>
-    	<label for="number">Phone Number: </label>
-		<input type="text" id="number" placeholder="555-555-5555" />  
+    	<label>Phone Number: </label>
+		<input type="text" name="phone" placeholder="555-555-5555" />  
     </li>
     <li>
-    	<label for="email">Email: </label>
-		<input type="text" id="email" placeholder="john_doe@example.com" />  
+    	<label>Email: </label>
+		<input type="text" name="email" placeholder="john_doe@example.com" />  
     </li>
     <li>
-    	<label for="password">Password: </label>
-		<input type="password" id="password" value="" /> 
+    	<label>Password: </label>
+		<input type="password" name ="pass" value="" /> 
     </li>
     <li>
-    	<input type="submit" value="Create Account">
+    	<label>Confirm Password: </label>
+		<input type="password" name="confPass" value="" /> 
+    </li>    
+    <li>
+    	<input type="submit" name="submit" value="Create Account">
     </li>
 </ul>
 </form>
