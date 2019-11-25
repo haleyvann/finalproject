@@ -11,7 +11,7 @@ ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
 Menu cart = (Menu) request.getAttribute("cart");
 // loop thru the arraylist to export as a String
 String finalCart = "";
-for(int i = 0; i < cartItems.size(); ++i) {
+for(int i = 1; i < cartItems.size(); ++i) {
 	finalCart += cartItems.get(i);
 }
 finalCart += "<br>" + "<input type='submit' name='Checkout' value='Checkout' >" + "</form>";
@@ -37,10 +37,6 @@ finalCart += "<br>" + "<input type='submit' name='Checkout' value='Checkout' >" 
 <h1> Tony's Pizza Cart</h1><br>
 
 <p><%= finalCart %></p>
-
-<form name="cart" action="CartServlet" method="post">
-<input type="submit" name="Checkout" />
-</form>
 
 <form name="continue" action="menu.jsp">
 <input type="submit" name="continue" value="Continue Shopping" >
