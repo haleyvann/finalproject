@@ -85,10 +85,22 @@ public class Menu {
 
 	@Override
 	public String toString() {
-		//TODO format in a nice display for the cart page
-		return "image tag of the menuItem" + menuItem + " price $" + price +
+		String img = "<img src=";
+		
+		if(this.menuItem.equalsIgnoreCase("Pepperoni Pizza")) {
+			img += "whatever the link is to finish the tag";
+		} else if(this.menuItem.equalsIgnoreCase("Cheese Pizza")) {
+			img += "whatever the link is to finish the tag";
+		} else if(this.menuItem.equalsIgnoreCase("Vegan Pizza")) {
+			img += "whatever the link is to finish the tag";
+		} else if(this.menuItem.equalsIgnoreCase("Meat Lovers Pizza")) {
+			img += "whatever the link is to finish the tag";
+		} else {
+			img += "whatever the link is to finish the tag";
+		}
+		return img + menuItem + " price $" + price +
 				"<form name=\"addQuantity\" action=\"CheckoutServlet\" method=\"post\"> " + "<br>" +
-				"<input type=\"text\" name=\"addQuantity\" value=\"Add Quantity\" >" + "<br>";
+				"<input type=\"text\" name=\"addQuantity\" value=\"Quantity of Item\" >" + "<br>";
 	}
 	
 
