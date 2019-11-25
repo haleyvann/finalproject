@@ -11,7 +11,8 @@ import java.util.Date;
 public class Order extends Menu {
 
 	//information regarding one order
-	private Date orderDate;
+	private int orderID = 0;
+	private String orderDate;
 	private int orderQuantity;
 	private double revenue;
 	
@@ -21,7 +22,8 @@ public class Order extends Menu {
 	 * @param orderQuantity
 	 * @param orderPrice
 	 */
-	public Order(Date orderDate, int orderQuantity, double revenue) {
+	public Order(int orderID, String orderDate, int orderQuantity, double revenue) {
+		this.orderID += orderID;
 		this.orderDate = orderDate;
 		this.orderQuantity = orderQuantity;
 		this.revenue = revenue;
@@ -34,12 +36,28 @@ public class Order extends Menu {
 	public Order() {
 	}
 
+	/**
+	 * @return the orderID
+	 */
+	public int getOrderID() {
+		return orderID;
+	}
 
+
+	/**
+	 * have a set number that increments each time method is called
+	 * @param orderID the orderID to set
+	 */
+	public void setOrderID(int orderID) {
+		//TODO increment ID each time method is called (i.e. new order is placed)
+		orderID += this.orderID;
+		this.orderID = orderID;
+	}
 	
 	/**
 	 * @return the orderDate
 	 */
-	public Date getOrderDate() {
+	public String getOrderDate() {
 		return orderDate;
 	}
 
@@ -47,7 +65,7 @@ public class Order extends Menu {
 	/**
 	 * @param orderDate the orderDate to set
 	 */
-	public void setOrderDate(Date orderDate) {
+	public void setOrderDate(String orderDate) {
 		this.orderDate = orderDate;
 	}
 
@@ -71,7 +89,7 @@ public class Order extends Menu {
 
 
 
-	public void setRevenue(double price, double quantity) {
+	public void setRevenue(double price, int quantity) {
 		this.revenue = price * quantity;
 	}
 	
@@ -84,7 +102,7 @@ public class Order extends Menu {
 	public String toString() {
 		//TODO toString method that returns the menu item(s), quantity and the total price of the order
 		return "Order [orderDate=" + orderDate + ", orderQuantity=" + orderQuantity + ", revenue=" + revenue
-				+ ", toString()=" + super.toString() + "]";
+				+ "]";
 	}
 	
 }
