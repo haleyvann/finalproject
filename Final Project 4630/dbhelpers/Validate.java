@@ -39,7 +39,7 @@ public class Validate {
         boolean st = false;
         
         try {
-        	PreparedStatement ps = this.connection.prepareStatement("select * from customers where email=? and password=?");
+        	PreparedStatement ps = this.connection.prepareStatement("select * from customers where userName=? and password=?");
             ps.setString(1, email);
             ps.setString(2, pass);
             this.results = ps.executeQuery();
