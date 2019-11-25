@@ -49,11 +49,27 @@ public class CheckoutServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 
-		//send to checkout.jsp
-		String url = "/checkout.jsp";
+		// default
+		String url = "";
+		ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
 	
 		// set up a Order, Customer and Menu object
 		Order order = (Order) session.getAttribute("order");
+		
+		if(request.getParameter("remove") != null) {
+			cartItems.remove(request.getAttribute("indicator"));
+			if(cartItems.size() < 2) {
+				url = "/index.jsp";
+			} else {
+				url = "/cart.jsp";
+			}
+		} else if(request.getParameter("checkout") != null) {
+			if(cartItems.size() < 2) {
+				url = "/index.jsp";
+			} else {
+				url = "/checkout.jsp";
+			}
+		}
 	    
 		// set up an addQuery object
 //	    AddOrder ao = new AddOrder("pizza", "root", "liammist4630");
