@@ -7,15 +7,12 @@
 <%@ page import="java.util.ArrayList" %> 
   
 <%   
-
 // takes the String contained in the cart for the current session
 ArrayList<String> cartItems = (ArrayList<String>) session.getAttribute("cartItems");
 String cart = (String) session.getAttribute("cart");
 cartItems.add(cart);
-
 //need to figure out when customerID is initialized and how to keep track of it
 Customer customer = new Customer();
-
 %> 
 <!DOCTYPE html>
 <html>
@@ -51,9 +48,9 @@ Customer customer = new Customer();
 <input type="submit" name="addPep" value="Add to Cart" >
 </form>
 <div class="row">
-<img src="images/sausage.jpg"/>
+<img src="images/veganPizza.jpg"/>
 </div>
-<h2>Sausage Pizza</h2>
+<h2>Vegan Pizza</h2>
 <h3>$11.99</h3>
 <form name="addCart3" action="MenuServlet" method="post">
 <input type="submit" name="addVegan" value="Add to Cart" >
@@ -67,9 +64,9 @@ Customer customer = new Customer();
 <input type="submit" name="addML" value="Add to Cart" >
 </form>
 <div class="row">
-<img src="images/theWorks.jpg"/>
+<img src="images/bcPizza.jpg"/>
 </div>
-<h2>The Works</h2>
+<h2>Buffalo Chicken Pizza</h2>
 <h3>$13.99</h3>
 <form name="addCart5" action="MenuServlet" method="post">
 <input type="submit" name="addBC" value="Add to Cart" >
