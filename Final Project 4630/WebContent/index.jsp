@@ -2,9 +2,19 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ page import="java.util.ArrayList" %> 
+<%@ page import="model.Menu" %>  
+<%@ page import="model.Order" %> 
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.DateFormat" %>  
+<%@ page import="java.text.SimpleDateFormat" %> 
+
 <%
 ArrayList<Menu> cartItems = new ArrayList<Menu>();
 session.setAttribute("cartItems", cartItems);
+DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+Date date = new Date();
+Order order = new Order(1, dateFormat.format(date));
+session.setAttribute("order", order);
 %>
 <!DOCTYPE html>
 <html>
