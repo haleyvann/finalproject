@@ -47,12 +47,12 @@ public class RegisterServlet extends HttpServlet {
 			
 		
 		if(pass.equals(confPass)) {
-			NewUser nu = new NewUser();
-			nu.setfName(fName);
-			nu.setlName(lName);
-			nu.setEmail(email);
-			nu.setPass(pass);
-			nu.setPhone(phone);
+			Customer cust = new Customer();
+			cust.setfName(fName);
+			cust.setlName(lName);
+			cust.setEmail(email);
+			cust.setPassword(pass);
+			cust.setPhone(phone);
 			
 			Register reg = new Register("netappsdb", "root", "pwd");
 			
