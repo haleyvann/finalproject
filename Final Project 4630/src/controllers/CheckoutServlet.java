@@ -48,15 +48,12 @@ public class CheckoutServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		
-		// get the data from the cart.jsp
-	    int quantity = Integer.parseInt(request.getParameter("addQuantity"));
+
+		//send to checkout.jsp
+		String url = "/checkout.jsp";
 	
 		// set up a Order, Customer and Menu object
-	    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-	    Date date = new Date();
-	    Order order = new Order(1, dateFormat.format(date), 0, 0);
-	    order.setOrderQuantity(quantity);
+		Order order = (Order) session.getAttribute("order");
 	    
 		// set up an addQuery object
 //	    AddOrder ao = new AddOrder("pizza", "root", "liammist4630");
@@ -65,9 +62,6 @@ public class CheckoutServlet extends HttpServlet {
 	    //TODO figure out best way to update the order table
 //	    ao.doAdd(order, (Customer) session.getAttribute("cust"), (Menu) session.getAttribute("cust"));
 	    
-		// pass execution control to the index.jsp
-	    request.setAttribute("order", order);
-	    String url = "/checkout.jsp";
 	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 	    dispatcher.forward(request, response);
