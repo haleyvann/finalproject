@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Validate valid = new Validate("netappsdb", "root", "pwd");
+		Validate valid = new Validate("pizza", "root", "liammist4630");
         
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
