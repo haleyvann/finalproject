@@ -3,7 +3,7 @@
     
 <%@ page import="java.util.ArrayList" %> 
 <%
-ArrayList<String> cartItems = new ArrayList<String>();
+ArrayList<Menu> cartItems = new ArrayList<Menu>();
 session.setAttribute("cartItems", cartItems);
 %>
 <!DOCTYPE html>
