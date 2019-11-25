@@ -3,6 +3,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  * @author brianliamgrant
  *
@@ -10,20 +12,18 @@ package model;
 public class Menu {
 
 	//information about the menu items
+	private int menuID;
 	private String menuItem;
 	private double price;
-	private String[] ingredients;
 	
 	/**
 	 * @param menuItem
 	 * @param price
-	 * @param quantity
-	 * @param ingredients
 	 */
-	public Menu(String menuItem, double price, String[] ingredients) {
+	public Menu(int menuID, String menuItem, double price) {
+		this.menuID = menuID;
 		this.menuItem = menuItem;
 		this.price = price;
-		this.ingredients = ingredients;
 	}
 
 	
@@ -35,6 +35,22 @@ public class Menu {
 
 
 	
+	/**
+	 * @return the menuID
+	 */
+	public int getMenuID() {
+		return menuID;
+	}
+
+
+	/**
+	 * @param menuID the menuID to set
+	 */
+	public void setMenuID(int menuID) {
+		this.menuID = menuID;
+	}
+
+
 	/**
 	 * @return the menuItem
 	 */
@@ -67,30 +83,15 @@ public class Menu {
 	}
 
 
-
-
-
-	/**
-	 * @return the ingredients
-	 */
-	public String[] getIngredients() {
-		return ingredients;
-	}
-
-
-	/**
-	 * @param ingredients the ingredients to set
-	 */
-	public void setIngredients(String[] ingredients) {
-		this.ingredients = ingredients;
-	}
-
-
-	
 	@Override
 	public String toString() {
-		return "Menu [menuItem=" + menuItem + "]";
+		//TODO format in a nice display for the cart page
+		return "image tag of the menuItem" + menuItem + " price $" + price +
+				"<form name=\"addQuantity\" action=\"CheckoutServlet\" method=\"post\"> " + "<br>" +
+				"<input type=\"text\" name=\"addQuantity\" value=\"Add Quantity\" >" + "<br>";
 	}
+	
+
 	
 	
 	
