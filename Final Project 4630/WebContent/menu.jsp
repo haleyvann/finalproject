@@ -43,7 +43,7 @@ cartItems.add(cart);
 </form>
 <h4>Vegan Price: $11.99</h4>
 <br>
-<img src="veganPizza.jpg" />
+<img src="veganPizza.jpg" width=350px height=350px/>
 <form name="addCart3" action="MenuServlet" method="post">
 <input type="text" name="addQuantity" value='Quantity' >
 <br>
@@ -59,7 +59,7 @@ cartItems.add(cart);
 </form>
 <h4>Buffalo Chicken Price: $13.99</h4>
 <br>
-<img src="bcPizza.jpg" />
+<img src="bcPizza.jpg" width=350px height=350px/>
 <form name="addCart5" action="MenuServlet" method="post">
 <input type="text" name="addQuantity" value='Quantity' >
 <br>
