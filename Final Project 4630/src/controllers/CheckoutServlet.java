@@ -1,10 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,18 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import dbHelpers.AddOrder;
-import model.Customer;
-import model.Menu;
-import model.Order;
+import dbhelpers.CheckoutQuery;
 
 /**
  * Servlet implementation class CheckoutServlet
  */
-@WebServlet(description = "takes information from the checkout page and adds an order to the orders table in the DB after the checkout is complete", 
-urlPatterns = { "/CheckoutServlet" })
+@WebServlet("/CheckoutServlet")
 public class CheckoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -47,40 +37,32 @@ public class CheckoutServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-
-		// default
-		String url = "";
-		ArrayList<Menu> cartItems = (ArrayList<Menu>) session.getAttribute("cartItems");
-	
-		// set up a Order, Customer and Menu object
-		Order order = (Order) session.getAttribute("order");
+		int menuID = Integer.parseInt(request.getParameter("menuID"));
+		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		
-		if(request.getParameter("remove") != null) {
-			cartItems.remove(request.getAttribute("indicator"));
-			if(cartItems.size() < 2) {
-				url = "/index.jsp";
-			} else {
-				url = "/cart.jsp";
-			}
-		} else if(request.getParameter("checkout") != null) {
-			if(cartItems.size() < 2) {
-				url = "/index.jsp";
-			} else {
-				url = "/checkout.jsp";
-			}
+		CheckoutQuery cq = new CheckoutQuery("netappsdb", "root", "pwd");
+		
+		int qtyCheck = cq.checkInv(menuID, quantity);
+		
+		String checkoutMessage = "";
+		
+		if(qtyCheck > 0) {
+			checkoutMessage = "Order complete!";
+			cq.updateInv(menuID, qtyCheck);
 		}
-	    
-		// set up an addQuery object
-//	    AddOrder ao = new AddOrder("pizza", "root", "liammist4630");
-	    
-		// pass the order to addOrder to add to the database
-	    //TODO figure out best way to update the order table
-//	    ao.doAdd(order, (Customer) session.getAttribute("cust"), (Menu) session.getAttribute("cust"));
-	    
-	    
-	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-	    dispatcher.forward(request, response);
+		else {
+			checkoutMessage = "Sorry, we currently do not posses the inventory to meet your order. Please try again.";
+		}
+		
+		request.setAttribute("checkoutMessage", checkoutMessage);
+		String url = "/checkout.jsp";
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+		dispatcher.forward(request, response);
+			
+		
+		
+		
 	}
 
 }
